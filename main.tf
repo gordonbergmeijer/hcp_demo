@@ -22,6 +22,7 @@ resource "azurerm_resource_group" "main" {
     Environment = "Lab"
     Managed_By  = "Terraform"
     Owner       = "Bergmeijer"
+    boss        = "Gordon"
   }
 }
 
