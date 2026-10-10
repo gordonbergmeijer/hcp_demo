@@ -2,7 +2,7 @@ terraform {
   required_providers {
     customprovider = {
       source  = "app.terraform.io/bergmeijer/customprovider" # Private registry URL
-      version = "=> 1.0.0"
+      version = ">= 1.0.0"
     }
   }
 }
