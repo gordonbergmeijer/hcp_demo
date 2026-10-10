@@ -1,24 +1,13 @@
 terraform {
-  required_version = ">= 1.12.2"
   required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "=> 1.0"
-    }
-    random = {
-      source  = "hashicorp/random"
-      version = ">= 3.0.0"
-    }
-  }
-  cloud {
-    organization = "Bergmeijer"
-    workspaces {
-      name = "hcp-demo"
+    customprovider = {
+      source  = "app.terraform.io/bergmeijer/customprovider" # Private registry URL
+      version = "=> 1.0.0"
     }
   }
 }
 
-provider "azurerm" {
-  features {}
-  use_cli = false
+provider "customprovider" {
+  # Provider configuration arguments go here
+  api_key = var.private_api_key
 }
