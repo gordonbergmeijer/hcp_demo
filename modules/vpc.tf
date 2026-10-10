@@ -1,4 +1,4 @@
 module "vpc" {
-  source  = "app.terraform.io/<ORGANIZATION-NAME>/<MODULE-NAME>/<PROVIDER>"
-  version = "~> 1.0.0"
+  source  = "app.terraform.io/bergmeijer/vpc/azurerm"
+  version = "=> 1.0.0"
 }
